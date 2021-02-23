@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do</title>
+  </head>
+
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAr8WmE3U3vQlWqBoCc2dmp1yQL5NVue70",
+        authDomain: "todo-20151.firebaseapp.com",
+        projectId: "todo-20151",
+        storageBucket: "todo-20151.appspot.com",
+        messagingSenderId: "1088747768857",
+        appId: "1:1088747768857:web:61414ed61e829a45766e88",
+        measurementId: "G-R7F77MQPY0",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <header id="hd" style="background-color: rgb(255, 230, 0)">
+      <nav>
+        <h1 style="text-align: center">ToDo</h1>
+        <hr />
+      </nav>
+    </header>
+    <main style="padding: 5px">
+      <h2 style="position: absolute; left: 5px; display: inline">
+        Your
+        <span class="badge rounded-pill bg-info text-dark">ToDo's</span>
+      </h2>
+      <h2 style="position: absolute; right: 5px; display: inline">
+        <button type="button" class="btn btn-primary">+ Add ToDo</button>
+      </h2>
+      <section
+        id="ToDo"
+        style="position: relative; top: 75px; width: 100%"
+      ></section>
+      <script>
+        firebase
+          .database()
+          .ref("ToDo")
+          .once("value", function (snapshot) {
+            snapshot.forEach((childsnapshot) => {
+              var ToDo = document.getElementById("ToDo");
+              var Do = document.createElement("div");
+              Do.style =
+                "background-color: yellow; border-radius: 50px; padding: 10px; margin-bottom: 20px";
+              Do.innerHTML = childsnapshot.val().Do;
+              ToDo.appendChild(Do);
+            });
+          });
+      </script>
+    </main>
+  </body>
 </html>
