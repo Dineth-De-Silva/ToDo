@@ -15,7 +15,13 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <title>To Do</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+    />
+    <!--Custom-->
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <title>ToDo</title>
   </head>
 
   <body>
@@ -43,10 +49,18 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
-    <header id="hd" style="background-color: rgb(255, 230, 0)">
+    <header
+      id="hd"
+      style="
+        background: linear-gradient(
+          90deg,
+          rgba(255, 208, 0, 1) 0%,
+          rgba(250, 251, 0, 1) 100%
+        );
+      "
+    >
       <nav>
-        <h1 style="text-align: center">ToDo</h1>
-        <hr />
+        <h1 style="text-align: center; padding: 10px">ToDo</h1>
       </nav>
     </header>
     <main style="padding: 5px">
@@ -70,8 +84,16 @@
               var ToDo = document.getElementById("ToDo");
               var Do = document.createElement("div");
               Do.style =
-                "background-color: yellow; border-radius: 50px; padding: 10px; margin-bottom: 20px";
+                "background-color: rgb(241, 241, 241); border-radius: 50px; padding: 10px; margin-bottom: 20px";
+              var InDo = document.createElement("span");
+              InDo.style =
+                "position: absolute; right: 15px;border-radius: 50px";
+              InDo.classList.add("tick");
+              var I = document.createElement("i");
+              I.classList.add("bi", "bi-check");
+              InDo.appendChild(I);
               Do.innerHTML = childsnapshot.val().Do;
+              Do.appendChild(InDo);
               ToDo.appendChild(Do);
             });
           });
