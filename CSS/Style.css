@@ -1,3 +1,4 @@
-.tick:hover{
-    background-color: gray;
+.DoControls:hover {
+  height: 30px;
+  cursor: pointer;
 }
