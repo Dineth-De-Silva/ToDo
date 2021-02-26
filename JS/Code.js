@@ -14,7 +14,7 @@ function Reloadtodoos() {
         var ControlDo = document.createElement("span");
         ControlDo.style = "position: absolute; right: 15px;";
         var NotDone = document.createElement("img");
-        NotDone.src = "Assets/Icons/NotDone.svg";
+        NotDone.src = "Assets/Images/NotDone.svg";
         NotDone.height = 28;
         NotDone.classList.add("DoControls");
         NotDone.style = "padding: 2px; margin-right: 15px";
@@ -38,7 +38,7 @@ function Reloadtodoos() {
         });
         ControlDo.appendChild(NotDone);
         var Done = document.createElement("img");
-        Done.src = "Assets/Icons/Done.svg";
+        Done.src = "Assets/Images/Done.svg";
         Done.height = 28;
         Done.classList.add("DoControls");
         Done.title = "Done";
