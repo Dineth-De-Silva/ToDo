@@ -3,9 +3,9 @@
   "short_name": "TD",
   "start_url": ".",
   "display": "minimal-ui",
-  "background_color": "#2A3443",
+  "background_color": "#ffd000",
   "description": "Task tracker",
-  "theme_color": "#2A3443",
+  "theme_color": "#ffd000",
   "icons": [
     {
       "src": "./Assets/Icons/Favicon-72x72.png",
