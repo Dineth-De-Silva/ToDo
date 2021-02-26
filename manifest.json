@@ -8,14 +8,6 @@
   "theme_color": "#2A3443",
   "icons": [
     {
-      "src": "./Assets/Icons/Done.svg",
-      "type": "image/svg"
-    },
-    {
-      "src": "./Assets/Icons/NotDone.svg",
-      "type": "image/svg"
-    },
-    {
       "src": "./Assets/Icons/ToDo.ico",
       "sizes": "256x256",
       "type": "image/ico"

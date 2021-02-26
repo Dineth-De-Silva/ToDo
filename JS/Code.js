@@ -83,7 +83,7 @@ function Addtodo() {
   Alert.innerHTML = "ToDo Added !";
   Alert.style = "position: absolute; left: 5px; bottom: 0px";
   Foot.appendChild(Alert);
-  console.log("ToDo No." + Nexttodono + " Added")
+  console.log("ToDo No." + Nexttodono + " Added");
   var ToDoos = document.getElementById("ToDoos");
   ToDoos.innerHTML = "";
   Reloadtodoos();
