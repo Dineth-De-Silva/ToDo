@@ -10,6 +10,15 @@
   }
 }
 
+@keyframes Todoanime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .DoControls:hover {
   height: 30px;
   cursor: pointer;

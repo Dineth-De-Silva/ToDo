@@ -23,7 +23,7 @@ function Reloadtodoos() {
         var Do = document.createElement("div");
         Do.id = childsnapshot.val().No;
         Do.style =
-          "background-color: rgb(241, 241, 241); border-radius: 50px; padding: 10px; margin-bottom: 20px";
+          "background-color: rgb(241, 241, 241); border-radius: 50px; padding: 10px; margin-bottom: 20px; animation-name: Todoanime; animation-duration: 1s";
         Do.innerHTML = childsnapshot.val().Do;
         var ControlDo = document.createElement("span");
         ControlDo.style = "position: absolute; right: 15px;";
