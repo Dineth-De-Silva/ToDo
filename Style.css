@@ -1,3 +1,15 @@
+@keyframes Alertanime {
+  0% {
+    left: -500px;
+  }
+  75% {
+    left: 50px;
+  }
+  100% {
+    left: 5px;
+  }
+}
+
 .DoControls:hover {
   height: 30px;
   cursor: pointer;

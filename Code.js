@@ -47,7 +47,8 @@ function Reloadtodoos() {
           Alert.classList.add("alert", "alert-danger");
           Alert.role = "alert";
           Alert.innerHTML = "Bad Boy !";
-          Alert.style = "position: absolute; left: 5px; bottom: 0px";
+          Alert.style =
+            "position: absolute; left: 5px; bottom: 0px;  animation-name: Alertanime; animation-duration: 1s";
           Foot.appendChild(Alert);
         });
         ControlDo.appendChild(NotDone);
@@ -70,7 +71,8 @@ function Reloadtodoos() {
           Alert.classList.add("alert", "alert-success");
           Alert.role = "alert";
           Alert.innerHTML = "Well Done !";
-          Alert.style = "position: absolute; left: 5px; bottom: 0px";
+          Alert.style =
+            "position: absolute; left: 5px; bottom: 0px; animation-name: Alertanime; animation-duration: 1s";
           Foot.appendChild(Alert);
         });
         ControlDo.appendChild(Done);
@@ -95,7 +97,8 @@ function Addtodo() {
   Alert.classList.add("alert", "alert-primary");
   Alert.role = "alert";
   Alert.innerHTML = "ToDo Added !";
-  Alert.style = "position: absolute; left: 5px; bottom: 0px";
+  Alert.style =
+    "position: absolute; left: 5px; bottom: 0px; animation-name: Alertanime; animation-duration: 1s";
   Foot.appendChild(Alert);
   console.log("ToDo No." + Nexttodono + " Added");
   var ToDoos = document.getElementById("ToDoos");

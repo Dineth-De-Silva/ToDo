@@ -1,6 +1,6 @@
 {
   "name": "ToDo",
-  "short_name": "TD",
+  "short_name": "ToDo",
   "start_url": ".",
   "display": "minimal-ui",
   "background_color": "#ffd000",
