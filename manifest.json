@@ -2,7 +2,7 @@
   "name": "ToDo",
   "short_name": "ToDo",
   "start_url": ".",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#ffd000",
   "description": "Task tracker",
   "theme_color": "#ffd000",
