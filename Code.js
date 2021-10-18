@@ -86,7 +86,8 @@ function Reloadtodoos() {
 function Addtodo() {
   var Nexttodono = String(Number(Lasttodono) + 1);
   var Do = window.prompt("What you have to do ?");
-  firebase
+  if (Do !== ""){
+    firebase
     .database()
     .ref("ToDoos")
     .child(Nexttodono)
@@ -104,4 +105,5 @@ function Addtodo() {
   var ToDoos = document.getElementById("ToDoos");
   ToDoos.innerHTML = "";
   Reloadtodoos();
+  }
 }
